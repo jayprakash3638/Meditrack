@@ -1,0 +1,35 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row justify-content-center">
+  <div class="col-md-8  ">
+    <div class="form-container mt-5 p-4 rounded shadow">
+      <h3 class="text-white">Edit Patient Details</h3>
+      <form method="POST" action="/rooms/<%= room._id %>?_method=PUT">
+        <!-- Your form fields -->
+        <div class="mb-3">
+          <label class="form-label text-white">Room No</label> 
+          <input name="room[room]" value="<%= room.room %>" type="number" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label text-white">Patient Name</label> 
+          <input name="room[Name]" value="<%= room.Name %>" type="text" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label text-white">Patient Age</label> 
+          <input name="room[age]" value="<%= room.age %>" type="number" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label text-white">Condition</label> 
+          <input name="room[Condition]" value="<%= room.Condition %>" type="text" class="form-control" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label text-white">Doctor Name</label> 
+          <input name="room[Doctor]" value="<%= room.Doctor %>" type="text" class="form-control" />
+        </div>
+        <button class="btn btn-info">Save Changes</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    

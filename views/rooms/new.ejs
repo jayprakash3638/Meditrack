@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+    
+    <div class="row">
+        <div class="col-12 ">
+        <div class="card mt-4">
+            <div class="card-body">
+                <h3>Add a new Patient</h3>
+        <form method="POST" action="/rooms">
+        <div class="mb-3">
+           <lable for="room" class="form-label">Room No</lable> 
+           <input name="room[room]" placeholder="Enter Room No." type="text" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <lable for="Name" class="form-label">Patient Name</lable> 
+            <input name="room[Name]" placeholder="Enter Patient Name" type="text" class="form-control" />
+      
+        </div>
+        <div class="mb-3">
+            <lable for="age" class="form-label">Patient Age</lable> 
+            <input
+            name="room[age]"
+            placeholder="Enter Patient age"
+            type="text" class="form-control"
+          />
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-6">
+                <lable for="Condition" class="form-label">Condition</lable> 
+                <input name="room[Condition]" placeholder="Patient Condition" type="text" class="form-control" />
+                <br /><br />
+            </div>
+            <div class="mb-3 col-md-6">
+                <lable for="Doctor" class="form-label">Doctor Name</lable> 
+                <input name="room[Doctor]" placeholder="Enter Doctor Name" type="text" class="form-control"/>
+            </div>
+        </div>
+        
+        
+        <br>
+
+        <button class="btn btn-dark add-btn ">Add</button>
+        <br><br>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+
+</div>
+</div>
+
+
+<!-- 
+    <h3>Add a New Patient</h3>
+    <form method="POST" action="/rooms">
+        <input name="room[room]" placeholder="Enter Room No." type="text" />
+      
+      <br /><br />
+      <input name="room[Name]" placeholder="Enter Patient Name" type="text" />
+      
+      <br /><br />
+      <input
+        name="room[age]"
+        placeholder="Enter Patient age"
+        type="text"
+      />
+      <br /><br />
+      <input name="room[Condition]" placeholder="Patient Condition" type="text" />
+      <br /><br />
+      <input name="room[Doctor]" placeholder="Enter Doctor Name" type="text" />
+      
+      
+      <br /><br />
+      <button>Add</button>
+    </form>
+  </body> -->

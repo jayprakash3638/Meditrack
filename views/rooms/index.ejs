@@ -1,0 +1,52 @@
+<% layout("layouts/boilerplate")%>
+
+<div class="dashboard-main">
+  <header class="dashboard-header">
+    Hospital Dashboard
+  </header>
+
+  <div class="stats">
+    <div class="card" id="patients">
+      <h2>Patients</h2>
+      <p>Total: <span id="total-patients">120</span></p>
+      <p>Critical: <span id="critical-patients">5</span></p>
+    </div>
+    <div class="card" id="doctors">
+      <h2>Doctors</h2>
+      <p>On Duty: <span id="on-duty">15</span></p>
+    </div>
+    <div class="card" id="beds">
+      <h2>Beds Available</h2>
+      <p>ICU: <span id="icu-beds">3</span></p>
+      <p>General: <span id="general-beds">20</span></p>
+    </div>
+  </div>
+
+  <div class="appointments">
+    <h2>Upcoming Appointments</h2>
+    <ul id="appointment-list">
+      <li>Dr. Shivansh Singh - 10:30 AM</li>
+      <li>Dr. Neha Sharma - 11:00 AM</li>
+    </ul>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4">
+      <% for(let room of allRooms) { %>
+        <a href="/rooms/<%= room._id %>" class="room-links">
+          <div class="col d-flex justify-content-center">
+            <div class="card shadow-sm room-card">
+              <div class="card-body">
+                <h5 class="card-title">Room: <%= room.room %></h5>
+                <p class="card-text">
+                  <strong>Name:</strong> <%= room.Name %><br>
+                  <strong>Condition:</strong> <%= room.Condition %>
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</div>
